@@ -49,3 +49,12 @@ func toInt(input string) int {
 func makeIntArray(length int) []int {
 	return make([]int, length, length)
 }
+
+// intの二次元配列を作成
+func makeIntTwoDimensionalArray(n int, m int) [][]int {
+	graph := make([][]int, n)
+	for i := 0; i < n; i++ {
+		graph[i] = make([]int, m)
+	}
+	return graph
+}
