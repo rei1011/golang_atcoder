@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -57,4 +58,9 @@ func makeIntTwoDimensionalArray(n int, m int) [][]int {
 		graph[i] = make([]int, m)
 	}
 	return graph
+}
+
+// 正規表現にマッチするか判定する
+func checkRegexp(reg, str string) bool {
+	return regexp.MustCompile(reg).Match([]byte(str))
 }
