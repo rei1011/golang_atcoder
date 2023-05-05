@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"regexp"
 	"strconv"
 	"strings"
@@ -68,4 +69,11 @@ func checkRegexp(reg, str string) bool {
 // runeからintに変換する
 func runeToInt(input rune) int {
 	return int(input - '0')
+}
+
+// alphabetを順に出力する
+func printAlphabet() {
+	for i := 0; i < 26; i++ {
+		fmt.Println(string('a' + i))
+	}
 }
