@@ -64,3 +64,8 @@ func makeIntTwoDimensionalArray(n int, m int) [][]int {
 func checkRegexp(reg, str string) bool {
 	return regexp.MustCompile(reg).Match([]byte(str))
 }
+
+// runeからintに変換する
+func runeToInt(input rune) int {
+	return int(input - '0')
+}
