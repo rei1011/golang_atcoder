@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -85,4 +86,9 @@ func reverse(s string) string {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
 	return string(runes)
+}
+
+// intの配列を降順でsortする
+func sortIntReverse(array []int) {
+	sort.Sort(sort.Reverse(sort.IntSlice(array)))
 }
