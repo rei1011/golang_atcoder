@@ -92,3 +92,12 @@ func reverse(s string) string {
 func sortIntReverse(array []int) {
 	sort.Sort(sort.Reverse(sort.IntSlice(array)))
 }
+
+// intの絶対値を取得する関数
+func intAbs(input int) int {
+	if input >= 0 {
+		return input
+	} else {
+		return -input
+	}
+}
